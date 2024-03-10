@@ -1,10 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Home from './pages/Home'
+import Dashboard from './pages/Dashboard'
+import SignIn from './pages/SignIn'
+import SignUp from './pages/SignUp'
+const App = () => {
   return (
-    <h1 className='text-5xl'>Hello world</h1>
-  );
+    <>
+    <BrowserRouter>
+    <Routes> 
+      <Route path ='/' element= {<Home />} />
+      <Route path = '/Dashboard' element = {<Dashboard />} />
+      <Route path = '/Signin' element = {<SignIn />} />
+      <Route path = '/SignUp' element = {<SignUp />} />
+
+
+    </Routes>
+    </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App
